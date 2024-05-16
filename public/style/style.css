@@ -1,0 +1,850 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 0 !important;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+::selection {
+    background: #F79E02;
+    text-shadow: none;
+}
+
+.edit {
+    background-color: #E8E8E8 !important;
+    padding-top: 150px !important;
+}
+
+.error {
+    /* margin: 0 auto; */
+    border: 2px solid rgb(252, 63, 63);
+    background-color: rgba(247, 5, 5, 0.5);
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+}
+
+table.table-special tbody tr {
+    display: none;
+}
+
+
+table.table-special tbody tr.active {
+    display: table-row;
+}
+
+/*
+.errors ul {
+    list-style-type: none;
+    width: 500px;
+    margin: 0 auto;
+} */
+
+.top__section__name {
+    background-color: #2F2FA2;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 5px 0 5px 220px;
+    /* margin-bottom: 20px; */
+    margin-bottom: 0;
+}
+
+
+.form__btn {
+    background-color: white;
+    border: 2px solid #F64C72;
+    padding: 4px 25px;
+    color: #F64C72;
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+.form__btn:hover {
+    background-color: #F64C72;
+    color: white;
+}
+
+.form__update {
+    border: 4px white rgb(194, 194, 194);
+    /* display: grid; */
+    align-items: center;
+    justify-items: center;
+    width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    border-right: 4px solid #242582;
+    border-left: 4px solid #242582;
+}
+
+.form__update h3 {
+    padding: 10px 0 0 40px;
+}
+
+.form__update hr {
+    margin-bottom: 0;
+}
+
+.form__update form {
+    display: grid;
+    padding: 30px 40px 40px 40px;
+    gap: 10px;
+}
+
+.form__update form div {
+    display: grid;
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+.form__update form div input,
+.form__update form div textarea,
+.form__update form div #status {
+    padding: 3px 0 3px 10px;
+    border-radius: 8px;
+    transition: all .3s;
+    outline: none;
+    border: 2px solid #242582;
+    resize: none;
+}
+
+.form__update form input[type=submit] {
+    height: 35px;
+    width: 100%;
+    /* background-color: #F64C72; */
+    margin-top: 32px;
+    border: 2px solid #F64C72;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    transition: all .3s;
+}
+
+.form__update form input[type=submit]:hover {
+    background-color: #F64C72;
+    color: white;
+}
+
+.form__update form div input:focus {
+    box-shadow: 3px 4px 5px 4px rgb(230, 230, 230);
+}
+
+.form__update__student form .work {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form__update__student form .dont__work select,
+.form__update__student form .work select {
+    width: 350px;
+}
+
+.form__update__spec form {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section.auth {
+    padding-top: 10%;
+    background-color: #242582;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+}
+
+section.auth h3 {
+    color: white;
+}
+
+section.auth form {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    position: relative;
+    width: 120%;
+}
+
+section.auth form input {
+    width: 400px;
+    padding: 10px 15px;
+    transition: all .3s;
+}
+
+section.auth form input {
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #553D67;
+}
+
+section.auth form input[type=text]:focus,
+section.auth form input[type=password]:focus {
+    width: 101%;
+    border: 2px solid #F64C72;
+    box-shadow: 5px 3px 3px 2px rgba(227, 227, 227, 0.5);
+}
+
+section.auth form input[type=submit] {
+    background-color: #F64C72;
+    border-radius: 8px;
+    color: white;
+    height: 50px;
+}
+
+section.auth form input[type=submit]:hover {
+    font-size: 18px;
+}
+
+section.auth .modal {
+    color: #000;
+}
+
+section.auth .add__enterprise__profile {
+    background-color: white;
+    border: 2px solid #000;
+    transition: all .3s;
+}
+
+section.auth .add__enterprise__profile:hover {
+    background-color: #F64C72;
+    border: 2px solid #F64C72;
+}
+
+header {
+    background-color: #242582;
+    color: white;
+    padding: 10px 220px;
+}
+
+header section.head__top {
+    display: grid;
+    grid-template-columns: 1000px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    /* justify-items: end; */
+}
+
+header section.head__top .item:nth-child(1) {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    line-height: 10px;
+    letter-spacing: 1px;
+}
+
+header section.head__top .item:nth-child(1) h5 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+header section.head__top .item:nth-child(2) {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    /* grid-template-rows: 100px; */
+}
+
+header section.head__top .item:nth-child(2) div {
+    border-right: 1px solid white;
+    height: 25px;
+}
+
+header section.head__top .item:nth-child(2) div:last-child {
+    border: none;
+}
+
+header section.head__top .item:nth-child(2) div {
+    display: grid;
+    grid-template-columns: 20px auto;
+    padding: 0 5px;
+}
+
+header section.head__top .item div img {
+    width: 20px;
+    height: 20px;
+}
+
+header section.head__top .item:nth-child(2) .logout label {
+    cursor: pointer;
+    position: relative;
+    width: 55px;
+    margin: 0 auto;
+}
+
+header section.head__top .item:nth-child(2) .name p {
+    width: 75px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+}
+
+header section.head__top .item:nth-child(2) .name p a {
+    color: white;
+    text-decoration: none;
+}
+
+header section.head__top .item:nth-child(2) .logout label::before,
+header section.head__top .item:nth-child(2) .name p::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    top: 25px;
+    transition: all .3s;
+}
+
+header section.head__top .item:nth-child(2) .logout label:hover::before,
+header section.head__top .item:nth-child(2) .name p:hover::before {
+    width: 100%;
+}
+
+header section.head__top img {
+    width: 90%;
+}
+
+header section.navigation {
+    margin: 20px 0;
+}
+
+header section.navigation nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    align-items: center;
+    /* justify-items: center; */
+    list-style-type: none;
+    gap: 10px;
+}
+
+header section.navigation nav ul li {
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: all .3s;
+    text-align: center;
+
+}
+
+header section.navigation nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header section.navigation nav ul li:hover {
+    background-color: white;
+}
+
+header section.navigation nav ul li:hover a {
+    color: #2F2FA2;
+}
+
+/* .modal__windows.show__profile .profile__data .content__profile div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+
+.modal__windows.show__profile .profile__data .content__profile div:last-child {
+    border: none;
+}
+
+.modal__windows.show__profile .profile__data .content__profile div p {
+    margin: 0;
+}
+
+.modal__windows.show__profile .profile__data .content__profile div p:last-child {
+    background-color: rgb(224, 224, 224);
+    padding-left: 15px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.modal__windows.show__profile .profile__data .content__profile div input {
+    background-color: rgb(224, 224, 224);
+    padding-left: 15px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 50px;
+    width: 100%;
+} */
+
+main {
+    min-height: 67.8vh;
+}
+
+main section.news {
+    margin-bottom: 50px;
+}
+
+main section.news .blocks {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 50px;
+}
+
+main section.news .blocks p.button__add__news {
+    /* background-color: #F64C72; */
+    border: 2px solid #F64C72;
+    width: 300px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+main section.news .blocks p.button__add__news:hover {
+    background-color: #F64C72;
+    color: white;
+}
+
+main section.news h3 {
+    background-color: #2F2FA2;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 5px 0 5px 220px;
+    margin-bottom: 50px;
+}
+
+main section.news .blocks {
+    padding: 0 220px;
+}
+
+main section.news .new {
+    border: 10px solid #a2a2a2;
+    border-radius: 20px;
+    padding: 15px;
+
+}
+
+main section.news .new .name {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* padding-bottom: 10px; */
+}
+
+main section.news .new .name span {
+    color: #2F2FA2;
+}
+
+main section.news .new hr {
+    margin: 5px;
+}
+
+main section.news .new .name p {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+main section.news .new .desk {
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+main section.news .new .admin__oper .buttons {
+    display: flex;
+}
+
+main section.news .new .admin__oper .buttons form {
+    padding-right: 20px;
+}
+
+main section.news .new .admin__oper .buttons form input {
+    padding: 8px 20px;
+    background-color: white;
+    border: 2px solid #F64C72;
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+main section.news .new .admin__oper .buttons form input:hover {
+    background-color: #F64C72;
+    color: white;
+}
+
+.add__news form {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: 40px 200px;
+    row-gap: 10px;
+}
+
+.add__news form input,
+.add__news form textarea {
+    padding: 10px;
+    resize: none;
+    border-radius: 8px;
+}
+
+.modal-footer button.add {
+    background-color: #F64C72;
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    background-color: white;
+}
+
+.allScep {
+    overflow: hidden;
+}
+
+.allScep .filter .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 20px;
+    text-align: center;
+}
+
+.allScep .filter .tabs p {
+    border: 2px solid #F64C72;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.allScep .filter .tabs p:hover {
+    background-color: #F64C72;
+    color: white;
+}
+
+.allScep .filter .tabs p.active {
+    background-color: #F64C72;
+    color: white;
+}
+
+.allScep table {
+    /* position: relative; */
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.allScep table thead {
+    width: 100%;
+    /* position: relative; */
+    height: 50px;
+    /* padding-bottom: 10px; */
+}
+
+.allScep .table__wraper {
+    position: relative;
+}
+
+/* .allScep table thead tr {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 30px 238px 145px 300px 265px 300px 135px;
+    background-color: rgba(234, 234, 234, 0.8);
+} */
+
+.allScep .table__scroll {
+    height: 600px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.allScep table thead th span {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+main section.enterprises .content {
+    padding: 20px 220px;
+}
+
+main section.enterprises h2.name {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+main section.enterprises .add__enter form {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+main section.enterprises .add__enter form input {
+    padding: 7px;
+    outline: none;
+    font-size: 18px;
+}
+
+main section.enterprises .add__enter form input[type=text] {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+main section.enterprises .add__enter form input[type=submit] {
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    background-color: #F64C72;
+    color: white;
+}
+
+main section.students .content {
+    padding: 30px 220px;
+    min-height: 63.5vh;
+}
+
+main section.students .add__students.students form {
+    display: grid;
+}
+
+main section.students .add__students.form {
+    width: 700px;
+    margin: 0 auto;
+}
+
+main section.students .add__students.form.specializations form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+main section.students .add__students.form.specializations form div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main section.students .add__students.form.specializations form div input:last-child {
+    border-radius: 0 8px 8px 0 !important;
+    border: 1px solid black;
+}
+
+main section.students .add__students.form.specializations form input[type=submit] {
+    border-radius: 0 8px 8px 0;
+}
+
+main section.students .add__students.teachers form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 700px;
+    align-items: center;
+    margin-left: 25%;
+}
+
+/* main section.students .add__students.teachers form input:nth-child(3) {
+    border-radius: 0;
+}
+
+main section.students .add__students.teachers form input:nth-child(4) {
+    border-radius: 0 8px 8px 0;
+} */
+
+main section.students .add__students form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.students .add__students form input {
+    padding: 5px;
+    outline: none;
+    font-size: 18px;
+}
+
+main section.students .add__students form div input {
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px 0 0 8px !important;
+    /* border: 2px solid black; */
+    border-right: none;
+}
+
+main section.students .add__students form input:nth-child(even) {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+main section.students .add__students form input:nth-child(odd) {
+    border-radius: 0 8px 8px 0;
+    /* border-left: none; */
+}
+
+main section.students .add__students form input[type=submit] {
+    background-color: #F64C72;
+    color: white;
+}
+
+main section.students .add__students form label {
+    font-size: 18px;
+}
+
+main section.students .add__students form datalist {
+    width: 100%;
+}
+
+.users form select#status {
+    padding: 5px 5px 5.5px 5px;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+.profile #addWriting input {
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.profile h3.not__new__enterprises {
+    margin: 20px 0;
+}
+
+.profile .blocks {
+    height: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 250px 350px 1fr;
+    /* grid-template-rows: 250px 1fr; */
+}
+
+.profile .blocks .block.avatar {
+    background-color: rgb(216, 216, 216);
+    border-radius: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 250px;
+}
+
+.profile .blocks .block.avatar img {
+    width: 50%;
+}
+
+.profile .blocks .block.desk .content__profile div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    font-size: 18px;
+}
+
+.profile .blocks .block.desk .content__profile div p:last-child {
+    background-color: rgb(230, 230, 230);
+    padding-left: 15px;
+    border-radius: 80px;
+    border: 1px solid black;
+}
+
+.profile .blocks .block.desk .content__profile .content__profile__footer {
+    grid-template-columns: 1fr;
+}
+
+.profile .blocks .block.desk .content__profile .content__profile__footer input[type=submit] {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all .3s;
+}
+
+.profile .blocks .block.desk .content__profile .content__profile__footer input[type=submit]:hover {
+    background-color: #F64C72;
+    color: white;
+    border: 2px solid #F64C72;
+}
+
+/* .profile .content__profile__footer {
+    display: grid;
+    grid-template-rows: repeat(2, 70px);
+} */
+
+.profile .content__profile__footer button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.profile .content__profile__footer button:hover {
+    background-color: #F64C72;
+    color: white;
+    border: 2px solid #F64C72;
+}
+
+.profile form.changePassword input {
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+
+.modal-footer button {
+    font-weight: bold;
+}
+
+.modal-footer button:last-child {
+    background-color: #F64C72;
+    color: white;
+}
+
+.modal-footer button:last-child:hover {
+    background-color: #cb405e;
+}
+
+footer {
+    background-color: #242582;
+    color: white;
+    padding: 20px 220px;
+}
+
+footer .content ul {
+    list-style-type: none;
+    display: grid;
+    background-color: #242582;
+    grid-template-columns: repeat(6, 150px);
+    align-items: center;
+    /* justify-items: center; */
+    list-style-type: none;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+footer .content ul li {
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: all .3s;
+    text-align: center;
+}
+
+footer .content ul li:hover {
+    background-color: white;
+}
+
+footer .content ul li:hover a {
+    color: #242582;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
